@@ -1,4 +1,8 @@
 echo "enter basic salary:"
 read bsal
-gsal=$(( bsal+((bsal/100)*40)+(bsal/100)*20 ))
+da=`expr $bsal \* 40 / 100`
+hra=`expr $bsal \* 20 / 100`
+gsal=`expr $bsal + $da + $hra`
+echo "DA is: $da"
+echo "HRA is: $hra"
 echo "gross salary is: $gsal"
