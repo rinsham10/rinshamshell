@@ -1,12 +1,19 @@
-echo "enter the string"
-read str
-for i in $(seq 0 ${#str})
+clear
+echo enter a string
+read a
+b=`expr $a | wc -c`
+b=`expr $b - 1`
+echo number of letter=$b
+while test $b -gt 0
 do
-revstr=${str:$i:1}$revstr
+e=`expr $a | cut -c $b`
+d=$d$e
+b=`expr $b - 1`
 done
-if [ "$str" = "$revstr" ]
+echo the reversed string is :$d
+if test $a = $d
 then
-echo "palindrome"
+echo it is a palindrome
 else
-echo "not palindrome"
+echo it is not a palindrome
 fi
