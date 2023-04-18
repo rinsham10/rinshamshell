@@ -18,7 +18,7 @@ case $ch in
 echo "sum="$sum;;
 2)sum=`expr $n1 - $n2`
 echo "sub = "$sum;;
-3)sum=`exp $n1 \* $n2`
+3)sum=`expr $n1 \* $n2`
 echo "mul = "$sum;;
 4)sum=`expr $n1 / $n2`
 echo "div = "$sum;;
